@@ -1,0 +1,13 @@
+prefix=/Users/wisdomokwen/coding/machine-learning/ml-mobile-price-classification/myenv
+exec_prefix=/Users/wisdomokwen/coding/machine-learning/ml-mobile-price-classification/myenv
+libdir=/Users/wisdomokwen/coding/machine-learning/ml-mobile-price-classification/myenv/lib
+sharedlibdir=/Users/wisdomokwen/coding/machine-learning/ml-mobile-price-classification/myenv/lib
+includedir=/Users/wisdomokwen/coding/machine-learning/ml-mobile-price-classification/myenv/include
+
+Name: zlib
+Description: zlib compression library
+Version: 1.2.13
+
+Requires:
+Libs: -L${libdir} -L${sharedlibdir} -lz
+Cflags: -I${includedir}
