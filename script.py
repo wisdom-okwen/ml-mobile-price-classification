@@ -31,10 +31,10 @@ if __name__ == '__main__':
 
     # Data, model and output directories
     parser.add_argument("--model-dir", type=str, default=os.environ.get("SM_MODEL_DIR"))
-    parser.add_argument("--train", type=str, default-os.environ.get("SM_CHANNEL_TRAIN"))
-    parser.add_argument("--test", type=str, default-os.environ.get("SM_CHANNEL_TEST"))
-    parser.add_argument("--train-file", type=str, default-os.environ.get("x_train.csv"))
-    parser.add_argument("--test-file", type=str, default-os.environ.get("x_test.csv"))
+    parser.add_argument("--train", type=str, default=os.environ.get("SM_CHANNEL_TRAIN"))
+    parser.add_argument("--test", type=str, default=os.environ.get("SM_CHANNEL_TEST"))
+    parser.add_argument("--train-file", type=str, default=os.environ.get("x_train.csv"))
+    parser.add_argument("--test-file", type=str, default=os.environ.get("x_test.csv"))
 
     args, _ = parser.parse_known_args()
 
@@ -53,7 +53,7 @@ if __name__ == '__main__':
     print()
 
     X_train = train_df[features]
-    y_train = train_df[lables]
+    y_train = train_df[labels]
     X_test = test_df[features]
     y_test = test_df[labels]
 
@@ -61,7 +61,7 @@ if __name__ == '__main__':
     print(features)
     print()
 
-    print('Label Columns:  ', lables)
+    print('Label Columns:  ', labels)
     print()
 
     print('Data shape:  ')
